@@ -1,3 +1,9 @@
+/*
+Copyright 2014 Jeff Stanton
+License: MIT License.
+See /LICENSE.md for details.
+*/
+
 var path = require("path")
   , gulp = require("gulp")
   , open = require("open")

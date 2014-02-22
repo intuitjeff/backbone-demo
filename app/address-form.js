@@ -1,3 +1,11 @@
+/*
+Copyright 2014 Jeff Stanton
+License: MIT License.
+See /LICENSE.md for details.
+
+A simple demo of how to Backbone
+*/
+
 define(["backbone","handlebars-dom","jquery"], function(Backbone, HandlebarsDOM, $)
 {
   var AddressForm = {};
