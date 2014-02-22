@@ -1,0 +1,39 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 1em;
+}
+
+h1 {
+    margin: 0em;
+}
+
+input {
+    border: 1px solid #ccc;
+    padding: 0.5em 0.5em;
+    border-radius: 2px;
+    margin: 0;
+    margin-bottom: 0.5em;
+    width: 17em;
+}
+input.error {
+    background: #fcc;
+}
+
+button {
+    border: 1px solid #7a7;
+    background: #9c9;
+    padding: 0.5em 1em;
+    margin: 0;
+    margin-top: 0.5em;
+    border-radius: 2px;
+    cursor: pointer;
+}
+button[disabled],
+input[disabled] {
+    opacity: 0.6;
+    cursor: default;
+}

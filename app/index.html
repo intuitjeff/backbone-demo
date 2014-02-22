@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Backbone!</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <script>
+    //tell require.js where to find these components
+    //make sure you did a bower install (check README.md)
+    var require = {
+        paths: {
+            "jquery": "bower_components/jquery/dist/jquery.min",
+            "underscore": "bower_components/underscore/underscore",
+            "backbone": "bower_components/backbone/backbone",
+            "handlebars": "bower_components/handlebars/handlebars.amd.min"
+        }
+    };
+    </script>
+    <script src="bower_components/requirejs/require.js"></script>
+</head>
+<body>
+
+<h1>Backbone Demo</h1>
+<p>The address input goes here:</p>
+<div id="mainAddressForm"></div>
+
+
+<!-- begin client-side templates -->
+<script type="text/x-handlebars-template" id="addressForm">
+    <input type="text" class="addr-street1" placeholder="Street" /><br/>
+    <input type="text" class="addr-street2" placeholder="Street line 2" /><br/>
+    <input type="text" class="addr-city" placeholder="City" /><br/>
+    <input type="text" class="addr-state" placeholder="State" /><br/>
+    <input type="text" class="addr-zip" placeholder="Zip" /><br/>
+    <button class="save">Save</button>
+</script>
+
+<!-- load view (via require.js) and initiailze -->
+<script>
+require(["address-form"], function(AddressForm)
+{
+    var model = new AddressForm.Model({
+        street1: "",
+        street2: "",
+        city: "",
+        state: "",
+        zip: ""
+    });
+    var view = new AddressForm.View({
+        model: model
+    });
+    view.$el.appendTo("#mainAddressForm");
+});
+</script>
+
+</body>
+</html>

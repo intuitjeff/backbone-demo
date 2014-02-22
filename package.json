@@ -1,0 +1,18 @@
+{
+  "name": "nmsmoke.com",
+  "version": "0.1.0",
+  "author": "Jeffrey Stanton",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jffry/nmsmokecomgit"
+  },
+  "dependencies": {
+    "gulp": "~3.5.2",
+    "connect-livereload": "~0.3.2",
+    "tiny-lr": "0.0.5",
+    "express": "~3.4.8",
+    "bower": "~1.2.8",
+    "gulp-livereload": "~1.0.1",
+    "open": "0.0.4"
+  }
+}
